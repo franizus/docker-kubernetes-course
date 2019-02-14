@@ -1,0 +1,13 @@
+version: '3'
+services:
+    redis-server:
+        image: 'redis'
+    node-app:
+        # restart: "no" / always / on-failure / unless-stopped
+        build: .
+        ports:
+            - '4001:8081'
+# docker-compose up
+# docker-compose up --build
+# docker-compose up -d // launch in background
+# docker-compose down // stop containers
